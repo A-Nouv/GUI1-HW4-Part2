@@ -1,0 +1,48 @@
+/*
+Anderson Nouv
+Created: 10/29/22
+File: style.css
+*/
+
+/* Set height and width of table, as well as allow scrolling */
+table {
+    border-collapse: collapse;
+    height: 500px;
+    width: 50%;
+    display: block;
+    overflow-y: auto;
+}
+
+/* Spacing and border for table cells */
+th, td {
+    padding: 8px 14px;
+    border: 1px solid black;
+}
+
+/* Make table headers sticky when scrolling through table */
+/* Also style table headers */
+th {
+    background: #4682B4;
+    color: #FFFFFF;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+/* Styling for cells with output from multiplying */
+td {
+    background: #FFFFFF;
+    font-weight: bold;
+}
+
+/* Webpage background color */
+body {
+    background: lightskyblue;
+}
+
+/* Styling for error messages */
+.error {
+    color: red;
+    font-weight: bold;
+}
