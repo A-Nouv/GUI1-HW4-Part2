@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<!--
+Anderson Nouv
+Created: 10/29/22
+File: index.html
+HW3
+Description: An Interactive Dynamic Multiplication Table where the user can
+enter a specific starting and ending point for the horizontal and vertical axis.
+A table should then appear with the correct values. Unexpected inputs should be handled
+with error messages NOT a popup window.
+-->
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Dynamic Multiplication Table</title>
+      <link rel="stylesheet" href="css/style.css">
+      
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+      <!-- CSS for jQuery UI -->
+      <link rel="stylesheet" href="js/jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/jquery-ui.css">
+
+      <link rel="stylesheet" href="js/jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/jquery-ui.structure.css">
+
+      <!-- CSS for jQuery UI Theme -->
+      <link rel="stylesheet" href="js/jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/jquery-ui.theme.css">
+    </head>
+
+    <body>
+      <!-- Page content -->
+      <header id="main-header">
+        <div class="container">
+          <h1>Create A Multiplication Table!</h1>
+        </div>
+      </header>
+
+      <!-- Multiplication Table -->
+      <table id="myTable"></table>
+
+      <br>
+
+      <div class="container">
+        <form id="form-horizontal" name="form-horizontal">
+          <!-- Bootstrap for Table Ranges -->
+          <div class="form-group">
+            <label for="minColumn" class="col-md-2 control-label">
+              Minimum Column Value
+            </label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="minColumn" name="minColumn" required>
+            </div>
+
+            <!-- minColSlider -->
+            <div id="minColSlider"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="maxColumn" class="col-md-2 control-label">
+              Maximum Column Value
+            </label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="maxColumn" name="maxColumn" required>
+            </div>
+
+            <!-- maxColSlider -->
+            <div id="maxColSlider"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="minRow" class="col-md-2 control-label">
+              Minimum Row Value
+            </label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="minRow" name="minRow" required>
+            </div>
+
+            <!-- minRowSlider -->
+            <div id="minRowSlider"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="maxRow" class="col-md-2 control-label">
+              Maximum Row Value
+            </label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="maxRow" name="maxRow" required>
+            </div>
+
+            <!-- maxRowSlider -->
+            <div id="maxRowSlider"></div>
+          </div>
+        </form>
+
+        <!-- Make Table button that will do the errorMessage() and multiply functions when clicked -->
+        <button id="saveTable" type="submit" onclick="tabs()">Save Table</button>
+
+        <!-- Tabs -->
+        <div id="savedTabs">
+          <ul>
+          </ul>
+        </div>
+      </div>
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+      <!-- multiplicationTable JavaScript -->
+      <script src="js/multiplicationTable.js"></script>
+
+      <!-- Brings in jquery -->
+      <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+
+      <!-- Brings in jquery validation plugin -->
+      <script src="js/jquery-validation-1.19.5/src/core.js"></script>
+
+      <!-- Brings in jquery UI plugin -->
+      <script src="js/jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/jquery-ui.js"></script>
+    </body>
+</html>
