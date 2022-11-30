@@ -1,0 +1,74 @@
+/*
+Anderson Nouv
+Created: 10/29/22
+File: style.css
+*/
+
+/* Set height and width of table, center table, as well as allow scrolling */
+table {
+    border-collapse: collapse;
+    height: 500px;
+    width: 50%;
+    display: block;
+    overflow-y: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Spacing and border for table cells */
+th, td {
+    padding: 8px 14px;
+    border: 1px solid black;
+}
+
+/* Make table headers sticky when scrolling through table */
+/* Also style table headers */
+th {
+    background: #4682B4;
+    color: #FFFFFF;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+/* Styling for cells with output from multiplying */
+td {
+    background: #FFFFFF;
+    font-weight: bold;
+}
+
+/* Webpage background color */
+body {
+    background: lightskyblue;
+}
+
+/* Styling for error messages */
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Add space beneath input fields */
+.col-md-6 {
+    margin-bottom: 10px;
+}
+
+/* Add space above and below sliders, set sliders width */
+#minColSlider,
+#maxColSlider,
+#minRowSlider,
+#maxRowSlider {
+    width: 50%;
+    margin: 20px 0px 10px 0px;
+}
+
+/* Set width, styling, and center the area where tabs appear */
+#savedTabs {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #636363;
+    background: #c2c2c2 none;
+    margin-left: auto;
+    margin-right: auto;
+}
